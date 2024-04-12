@@ -1,0 +1,9 @@
+.projects__inner_container {
+  padding: 2rem 18rem;
+  margin-bottom: 4rem;
+  overflow: hidden !important;
+}
+
+.projects__inner_container > h1 {
+  text-align: center;
+}
