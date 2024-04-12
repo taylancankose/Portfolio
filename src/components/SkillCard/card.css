@@ -1,0 +1,28 @@
+.card__img {
+  object-fit: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  font-size-adjust: 1.5rem;
+  color: #777777;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.card__level {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 800px) {
+  .card__title {
+    font-size: 1rem;
+  }
+}

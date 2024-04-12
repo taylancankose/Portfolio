@@ -1,0 +1,23 @@
+.info__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0px;
+  width: 100%;
+  text-align: right;
+}
+
+.info__container > b {
+  text-align: left;
+}
+
+@media screen and (max-width: 1610px) {
+  .info__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info__container {
+    font-size: 0.9rem;
+  }
+}
