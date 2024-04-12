@@ -1,9 +1,24 @@
-.projects__inner_container {
+.projects__container {
   padding: 2rem 18rem;
-  margin-bottom: 4rem;
-  overflow: hidden !important;
+  margin-bottom: 2rem;
 }
 
-.projects__inner_container > h1 {
+.projects__container > h1 {
   text-align: center;
+}
+
+.projects__inner_container {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1610px) {
+  .projects__container {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects__container {
+    padding: 2rem;
+  }
 }
