@@ -1,0 +1,54 @@
+.togge-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle + label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.toggle + label::before {
+  content: "";
+  height: 1.2em;
+  width: 2.6em;
+  border-radius: 1em;
+  background-color: #000;
+  margin-right: 0.5em;
+}
+
+.toggle + label::after {
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 1em;
+  position: absolute;
+  background-color: #ffe86e;
+  left: 0.3em;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle:checked + label::after {
+  transform: translateX(100%);
+  left: 0.75em;
+}
+
+.toggle:checked + label::before {
+  background-color: #e92577;
+}
+
+.theme_span {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 0.95rem;
+}

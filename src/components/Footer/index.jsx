@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./footer.css";
 import Marker from "../Marker";
+import { ThemeContext } from "../../context/theme";
 
 function Footer() {
+  const { theme } = useContext(ThemeContext);
+  const { colors } = theme;
+
   return (
-    <div className="footer__container">
+    <div
+      className="footer__container"
+      style={{
+        backgroundColor: colors.bgColor,
+      }}
+    >
       <div className="footer__inner_container">
         <div>
-          <h2>
+          <h2
+            style={{
+              color: colors.gray0,
+            }}
+          >
             Let’s
-            <Marker color={"#82BBFF"} size={"2rem"}>
+            <Marker color={colors.blue} size={"2rem"}>
               {" "}
               work together
             </Marker>{" "}
@@ -20,9 +33,10 @@ function Footer() {
           <ul>
             <li>
               <a
-                href=""
+                href="https://github.com/taylancankose"
+                target="_blank"
                 style={{
-                  color: "#1769FF",
+                  color: colors.darkBlue,
                 }}
               >
                 Github
@@ -31,9 +45,10 @@ function Footer() {
             <li>
               <a
                 style={{
-                  color: "#1769FF",
+                  color: colors.darkBlue,
                 }}
-                href=""
+                href="https://www.linkedin.com/in/taylancankose/"
+                target="_blank"
               >
                 LinkedIn
               </a>{" "}
@@ -41,9 +56,9 @@ function Footer() {
             <li>
               <a
                 style={{
-                  color: "#AF0C48",
+                  color: colors.red,
                 }}
-                href=""
+                href="mailto:taylancankose@gmail.com"
               >
                 Email
               </a>{" "}

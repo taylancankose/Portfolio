@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./home.css";
 import Me from "../../assets/me.jpg";
 import { FaGithub } from "react-icons/fa";
@@ -6,13 +6,24 @@ import { FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import CV from "../../assets/CV.pdf";
 import Marker from "../../components/Marker";
+import { ThemeContext } from "../../context/theme";
+import Navbar from "../../components/Navbar";
 
 function Home() {
+  const { theme } = useContext(ThemeContext);
+  const { colors } = theme;
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        backgroundColor: colors.gray90,
+      }}
+    >
+      <Navbar />
       <div className="inner__container">
         <div className="text__container" id="text">
-          <h3 className="salute">
+          <h3 className="salute" style={{ color: colors.gray0 }}>
             Hi
             <svg
               width="32"
@@ -64,8 +75,13 @@ function Home() {
               ></path>
             </svg>
           </h3>
-          <h1 className="title">
-            <Marker color={"#e92577"} size={"2rem"}>
+          <h1
+            className="title"
+            style={{
+              color: colors.gray0,
+            }}
+          >
+            <Marker color={colors.pink} size={"2rem"}>
               I’m Tay
             </Marker>
             lan. I’m a full-stack <br /> developer. I can craft solid and
@@ -76,24 +92,64 @@ function Home() {
               href="https://www.linkedin.com/in/taylancankose/"
               target="_blank"
             >
-              <FaLinkedin color="black" size={36} style={{ marginRight: 20 }} />
+              <FaLinkedin
+                color={colors.gray0}
+                size={36}
+                style={{ marginRight: 20 }}
+              />
             </a>
             <a href="https://github.com/taylancankose" target="_blank">
-              <FaGithub color="black" size={36} style={{ marginRight: 20 }} />
+              <FaGithub
+                color={colors.gray0}
+                size={36}
+                style={{ marginRight: 20 }}
+              />
             </a>
             <a href={CV} download="">
-              <TbFileCv size={40} color="black" />
+              <TbFileCv size={40} color={colors.gray0} />
             </a>
           </div>
-          <h4 className="info__text">
-            Currently <span>Freelancing</span> for{" "}
-            <span>UX, UI, & Web Design</span> Project. <br /> Invite me to join
-            your team -{">"}{" "}
-            <a href="mailto:taylancankose@gmail.com">taylancankose@gmail.com</a>
+          <h4
+            className="info__text"
+            style={{
+              color: colors.gray0,
+            }}
+          >
+            Currently{" "}
+            <span
+              style={{
+                color: colors.red,
+              }}
+            >
+              Freelancing
+            </span>{" "}
+            for{" "}
+            <span
+              style={{
+                color: colors.red,
+              }}
+            >
+              UX, UI, & Web Design
+            </span>{" "}
+            Project. <br /> Invite me to join your team -{">"}{" "}
+            <a
+              style={{
+                color: colors.red,
+              }}
+              href="mailto:taylancankose@gmail.com"
+            >
+              taylancankose@gmail.com
+            </a>
           </h4>
         </div>
         <div className="image__container" id="img">
-          <img src={Me} className="profile__image" />
+          <img
+            src={Me}
+            className="profile__image"
+            style={{
+              boxShadow: `-10px -10px ${colors.pink}`,
+            }}
+          />
         </div>
       </div>
     </div>

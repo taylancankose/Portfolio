@@ -65,10 +65,9 @@ export const Skills = {
     },
     {
       id: 12,
-      name: "Agile",
+      name: "Agile\nMethodology",
       imgURL:
         "https://img.freepik.com/premium-vector/agile-development-method-vector-icon_116137-2066.jpg",
-      level: "Basic",
     },
     {
       id: 10,

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Info from "../Info";
 import "./infocard.css";
+import { ThemeContext } from "../../context/theme";
 
 function InfoCard() {
+  const { theme } = useContext(ThemeContext);
+  const { colors } = theme;
   return (
-    <div className="info_card_container">
+    <div
+      className="info_card_container"
+      style={{
+        backgroundColor: colors.card,
+      }}
+    >
       <h3 className="info_card_title">Temel Bilgiler</h3>
       <Info topic={"Doğum tarihi"} detail={"16.05.1996"} />
       <Info topic={"İkamet Şehri"} detail={"İzmir"} />

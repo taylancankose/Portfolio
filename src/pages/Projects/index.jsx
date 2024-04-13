@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./projects.css";
 import { DATA } from "./Data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { ThemeContext } from "../../context/theme";
 
 // Import Swiper styles
 import "swiper/css";
 import ProjectCard from "../../components/ProjectCard";
 
 function Projects() {
+  const { theme } = useContext(ThemeContext);
+  const { colors } = theme;
   return (
-    <div className="projects__container">
-      <h1>Projects</h1>
+    <div
+      className="projects__container"
+      style={{
+        backgroundColor: colors.bgColor,
+      }}
+    >
+      <h1
+        style={{
+          color: colors.gray0,
+        }}
+      >
+        Projects
+      </h1>
       <div className="projects__inner_container">
         <Swiper
-          onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           loop={true}
           grabCursor={true}
