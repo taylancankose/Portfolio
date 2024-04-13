@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import "./switch.css";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 
 function Switch() {
   const { toggleTheme, theme } = useContext(ThemeContext);
   const { colors, key } = theme;
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div className="toggle-container">
       <input
@@ -20,7 +23,7 @@ function Switch() {
             color: colors.gray0,
           }}
         >
-          {key === "dark" ? "LIGHT" : "DARK"} MODE
+          {translations[`theme-${key}`]}
         </span>
       </label>
     </div>

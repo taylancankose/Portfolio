@@ -1,17 +1,21 @@
 import React, { useContext } from "react";
 import "./projects.css";
-import { DATA } from "./Data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 
 // Import Swiper styles
 import "swiper/css";
 import ProjectCard from "../../components/ProjectCard";
+import DATA from "./data";
 
 function Projects() {
   const { theme } = useContext(ThemeContext);
   const { colors } = theme;
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
+  const projects = DATA();
   return (
     <div
       className="projects__container"
@@ -24,11 +28,10 @@ function Projects() {
           color: colors.gray0,
         }}
       >
-        Projects
+        {translations.projects}
       </h1>
       <div className="projects__inner_container">
         <Swiper
-          onSwiper={(swiper) => console.log(swiper)}
           loop={true}
           grabCursor={true}
           pagination={{ clickable: true }}
@@ -42,8 +45,9 @@ function Projects() {
             },
           }}
         >
-          {DATA.map((project) => (
+          {projects.map((project) => (
             <SwiperSlide
+              key={project.id}
               style={{
                 display: "flex",
                 justifyContent: "center",

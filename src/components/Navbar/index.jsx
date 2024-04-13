@@ -2,10 +2,13 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../context/theme";
 import "./navbar.css";
 import Switch from "../Switch";
+import { LocaleContext } from "../../context/locale";
 
 function Navbar() {
   const { theme } = useContext(ThemeContext);
   const { colors } = theme;
+  const { lng, toggleLng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div
       className="navbar__container"
@@ -24,7 +27,7 @@ function Navbar() {
           }}
         />
         <a
-          href="#"
+          onClick={toggleLng}
           className="language"
           style={{
             color: colors.gray0,
@@ -35,9 +38,8 @@ function Navbar() {
               color: colors.red,
             }}
           >
-            İNGİLİZCE
+            {translations.lng}
           </span>
-          ’YE GEÇ
         </a>
       </div>
     </div>

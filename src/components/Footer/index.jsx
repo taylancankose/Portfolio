@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import "./footer.css";
 import Marker from "../Marker";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 
 function Footer() {
   const { theme } = useContext(ThemeContext);
   const { colors } = theme;
-
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div
       className="footer__container"
@@ -21,12 +23,12 @@ function Footer() {
               color: colors.gray0,
             }}
           >
-            Let’s
+            {translations["lets"]}
             <Marker color={colors.blue} size={"2rem"}>
               {" "}
-              work together
+              {translations["work-together"]}
             </Marker>{" "}
-            on your next product.
+            {translations["next-product"]}
           </h2>
         </div>
         <div className="footer__link_container">

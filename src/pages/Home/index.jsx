@@ -7,10 +7,13 @@ import { TbFileCv } from "react-icons/tb";
 import CV from "../../assets/CV.pdf";
 import Marker from "../../components/Marker";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 import Navbar from "../../components/Navbar";
 
 function Home() {
   const { theme } = useContext(ThemeContext);
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   const { colors } = theme;
 
   return (
@@ -24,7 +27,7 @@ function Home() {
       <div className="inner__container">
         <div className="text__container" id="text">
           <h3 className="salute" style={{ color: colors.gray0 }}>
-            Hi
+            {translations.salute}
             <svg
               width="32"
               height="32"
@@ -82,10 +85,9 @@ function Home() {
             }}
           >
             <Marker color={colors.pink} size={"2rem"}>
-              I’m Tay
+              {translations["me-first"]}
             </Marker>
-            lan. I’m a full-stack <br /> developer. I can craft solid and
-            scalable frontend products. <br /> Let’s meet!
+            {translations["me-second"]}
           </h1>
           <div className="icon__container">
             <a
@@ -115,23 +117,16 @@ function Home() {
               color: colors.gray0,
             }}
           >
-            Currently{" "}
+            {translations["currently"]}
             <span
               style={{
                 color: colors.red,
               }}
             >
-              Freelancing
+              {translations["situation-highlight"]}
             </span>{" "}
-            for{" "}
-            <span
-              style={{
-                color: colors.red,
-              }}
-            >
-              UX, UI, & Web Design
-            </span>{" "}
-            Project. <br /> Invite me to join your team -{">"}{" "}
+            {translations["situation-projects"]} <br /> {translations.contact} -
+            {">"}{" "}
             <a
               style={{
                 color: colors.red,

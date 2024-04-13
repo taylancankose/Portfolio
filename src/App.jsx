@@ -5,17 +5,20 @@ import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import ThemeProvider from "./context/theme";
+import LocaleProvider from "./context/locale";
 
 function App() {
   return (
     <ThemeProvider>
-      <div>
-        <Home />
-        <Skills />
-        <Profile />
-        <Projects />
-      </div>
-      <Footer />
+      <LocaleProvider>
+        <div>
+          <Home />
+          <Skills />
+          <Profile />
+          <Projects />
+        </div>
+        <Footer />
+      </LocaleProvider>
     </ThemeProvider>
   );
 }

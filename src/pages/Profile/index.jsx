@@ -3,11 +3,13 @@ import "./profile.css";
 import Marker from "../../components/Marker";
 import InfoCard from "../../components/InfoCard";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 
 function Profile() {
   const { theme } = useContext(ThemeContext);
   const { colors } = theme;
-
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div
       className="profile__container"
@@ -21,7 +23,7 @@ function Profile() {
             color: colors.gray0,
           }}
         >
-          Profile
+          {translations.profile}
         </h1>
         <div className="profile__info_container">
           <InfoCard />
@@ -33,9 +35,8 @@ function Profile() {
               }}
             >
               <Marker color={"#82BBFF"} size={"1.4rem"}>
-                About m
+                {translations["about-me"]}
               </Marker>
-              e
             </h3>
             <div className="profile__description_container">
               <p
@@ -43,14 +44,7 @@ function Profile() {
                   color: colors.gray0,
                 }}
               >
-                After graduating from the Chemical Engineering department in
-                2019, I combined my passion for music with my curiosity about
-                the entrepreneurship and launched the Meet The Music app. During
-                this process, in order to improve myself in the field of
-                entrepreneurship, I participated in the University4Society
-                entrepreneurship program and became a member of the Superstars
-                team, and I also attended the "Fundamentals of Entrepreneurship"
-                training organized by Draper University
+                {translations["about-me-first"]}
               </p>
               <br />
               <p
@@ -58,13 +52,7 @@ function Profile() {
                   color: colors.gray0,
                 }}
               >
-                In the Meet The Music as a co-founder, we founded “MTM Yazılım
-                Dijital Hizmetler A.Ş.” by receiving seed investment from
-                Demirhan Büyüközcü, one of the founders of V-Count, Onedio and
-                Videodan, with Videodan and Onedio he had successfully exited.
-                In this period I worked in various areas such as product
-                development, growth, finance, user experience, developing and
-                marketing. The Company now has $5M of valuation.
+                {translations["about-me-second"]}
               </p>
             </div>
           </div>

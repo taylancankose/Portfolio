@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./projectcard.css";
 import Pill from "../Pill";
+import { LocaleContext } from "../../context/locale";
 
 function ProjectCard({ project }) {
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div
       key={project.id}
@@ -24,14 +27,15 @@ function ProjectCard({ project }) {
           href={project.githubLink}
           className="project__card__link"
         >
-          Github'da Görüntüle
+          {translations["view-github"]}
         </a>
         <a
           target="_blank"
           href={project.liveLink}
           className="project__card__link"
         >
-          Uygulamaya Git {"->"}
+          {translations["view-live"]}
+          {"->"}
         </a>
       </div>
       <div className="project__card__image_container">

@@ -3,11 +3,14 @@ import "./skills.css";
 import { Skills as Data } from "./skills";
 import SkillCard from "../../components/SkillCard";
 import { ThemeContext } from "../../context/theme";
+import { LocaleContext } from "../../context/locale";
 
 function Skills() {
   const { frontend, rest } = Data;
   const { theme } = useContext(ThemeContext);
   const { colors } = theme;
+  const { lng } = useContext(LocaleContext);
+  const { translations } = lng.language;
   return (
     <div
       style={{
@@ -20,7 +23,7 @@ function Skills() {
             color: colors.gray0,
           }}
         >
-          Skills
+          {translations.skills}
         </h1>
         <div className="skills__card_container">
           <h2
@@ -28,11 +31,11 @@ function Skills() {
               color: colors.gray0,
             }}
           >
-            Frontend Skills:
+            {translations["front-end-skills"]}
           </h2>
           <div className="skills__card_inner_container">
-            {frontend?.map((item) => (
-              <SkillCard item={item} />
+            {frontend?.map((item, i) => (
+              <SkillCard item={item} key={i} />
             ))}
           </div>
         </div>
@@ -42,11 +45,11 @@ function Skills() {
               color: colors.gray0,
             }}
           >
-            Backend & Business Skills:
+            {translations["other-skills"]}
           </h2>
           <div className="skills__card_inner_container">
-            {rest?.map((item) => (
-              <SkillCard item={item} />
+            {rest?.map((item, i) => (
+              <SkillCard item={item} key={i} />
             ))}
           </div>
         </div>
