@@ -21,3 +21,13 @@
     font-size: 0.9rem;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0.5rem 0px;
+    text-align: left;
+  }
+}

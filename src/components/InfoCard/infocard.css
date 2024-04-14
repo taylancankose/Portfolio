@@ -16,5 +16,9 @@
 @media screen and (max-width: 800px) {
   .info_card_container {
     width: 100%;
+    padding: 1rem;
+  }
+  .info_card_title {
+    font-size: 1.4rem;
   }
 }

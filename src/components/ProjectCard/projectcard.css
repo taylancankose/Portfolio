@@ -73,3 +73,9 @@
     margin-top: 0.5rem;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .project__card__image_container > img {
+    width: 250px;
+  }
+}

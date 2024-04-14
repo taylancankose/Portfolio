@@ -4,7 +4,7 @@ const tr = {
     salute: "Selam",
     "me-first": "Ben Tay",
     "me-second":
-      "lan. Full-stack developerım. Scalable frontend ürünleri geliştiriyorum. \nHadi tanışalım!",
+      "lan. Full-stack developerım. Scalable frontend projeleri geliştiriyorum. \nHadi tanışalım!",
     currently: "Şu anda ",
     "situation-highlight": "UI/UX, Web ve Mobil Geliştirme",
     "situation-projects": " Projeleri için freelance çalışıyorum.",
@@ -30,7 +30,7 @@ const tr = {
     "view-live": "Uygulamaya Git",
     lets: "Beraber",
     "work-together": "bir sonraki",
-    "next-product": "ürününüzde çalışmayı çok isterim",
+    "next-product": "projenizde çalışmayı çok isterim",
     "project-poke": "Tüm 10k Pokémon karakterinin listesi ve açıklaması.",
     "project-feedback":
       "Kullanıcılardan gelen geri bildirimleri ve derecelendirmeleri gösteren bir React uygulaması. Ayrıca ortalama derecelendirmeyi hesaplar.",

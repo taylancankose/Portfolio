@@ -1,6 +1,7 @@
 .container {
   overflow: hidden;
   white-space: pre-line;
+  position: relative;
 }
 
 .inner__container {
@@ -9,6 +10,7 @@
   align-items: start;
   justify-content: space-between;
   margin-top: 1rem;
+  position: relative;
 }
 
 .text__container {
@@ -68,6 +70,8 @@
 .info__text {
   margin-top: 1.7rem;
   font-weight: 400;
+  z-index: 1000;
+  position: relative;
 }
 
 .info__text > span,
@@ -88,6 +92,25 @@
   z-index: 100;
   height: 21.5rem;
   width: 21.5rem;
+}
+
+.home__stick {
+  width: 150px;
+  height: 50px;
+  border-radius: 0 50rem 50rem 0;
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.home__circle {
+  width: 100px;
+  height: 50px;
+  border-radius: 0 0 50rem 50rem;
+  position: absolute;
+  top: 0;
+  left: 30%;
 }
 
 @media screen and (max-width: 1610px) {
@@ -182,5 +205,27 @@
     height: 12.5rem;
     width: 12.5rem;
     border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home__stick {
+    width: 100px;
+    height: 34px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .inner__container {
+    padding: 0;
+  }
+  .text__container {
+    margin: auto;
+    text-align: center;
+  }
+  .icon__container {
+    justify-content: center;
+  }
+  .home__stick {
+    display: none;
   }
 }

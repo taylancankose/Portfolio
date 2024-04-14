@@ -9,7 +9,7 @@ import AppProvider from "./context";
 function App() {
   return (
     <AppProvider>
-      <div>
+      <div style={{ position: "relative", overflowX: "hidden" }}>
         <Home />
         <Skills />
         <Profile />

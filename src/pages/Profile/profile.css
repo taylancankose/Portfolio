@@ -1,5 +1,5 @@
 .profile__container {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .profile__inner_container {

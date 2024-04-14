@@ -13,8 +13,15 @@ function Skills() {
     <div
       style={{
         backgroundColor: colors.bgColor,
+        position: "relative",
       }}
     >
+      <div
+        className="skills__circle"
+        style={{
+          border: `1.3rem solid ${colors.circleColor}`,
+        }}
+      />
       <div className="skills__inner_container">
         <h1
           style={{
@@ -52,6 +59,18 @@ function Skills() {
           </div>
         </div>
       </div>
+      <div
+        className="skills__stick"
+        style={{
+          backgroundColor: colors.circleColor,
+        }}
+      />
+      <div
+        className="skills__circle_bottom"
+        style={{
+          border: `1.3rem solid ${colors.pink}`,
+        }}
+      />
     </div>
   );
 }

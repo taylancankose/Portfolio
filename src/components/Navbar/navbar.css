@@ -52,10 +52,11 @@
 
 @media screen and (max-width: 400px) {
   .navbar__inner_container {
-    width: 97%;
+    width: 90%;
+    margin: auto;
   }
   .navbar__container {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .navbar__inner_container {
     flex-wrap: wrap;

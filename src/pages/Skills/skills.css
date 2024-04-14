@@ -1,6 +1,8 @@
 .skills__inner_container {
   padding: 2rem 18rem;
-  overflow: hidden !important;
+  overflow: hidden;
+  position: relative !important;
+  z-index: 100;
 }
 
 .skills__inner_container > h1 {
@@ -17,11 +19,39 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+  z-index: 1;
 }
 
 .skills__card_container > h2 {
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+.skills__circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50rem;
+  position: absolute;
+  top: -3rem;
+  right: 30%;
+}
+
+.skills__stick {
+  width: 150px;
+  height: 50px;
+  border-radius: 0 50rem 50rem 0;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+}
+
+.skills__circle_bottom {
+  width: 120px;
+  height: 120px;
+  border-radius: 50rem;
+  position: absolute;
+  bottom: -12%;
+  right: -2%;
 }
 
 @media screen and (max-width: 1610px) {
@@ -30,8 +60,42 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .skills__circle_bottom {
+    bottom: -8%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .skills__inner_container {
     padding: 2rem;
+  }
+  .skills__circle {
+    width: 100px;
+    height: 100px;
+    border: 1rem solid #d9d9d9;
+  }
+  .skills__circle_bottom {
+    bottom: -8%;
+    right: -8%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills__circle_bottom {
+    bottom: -6%;
+    right: -8%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .skills__inner_container {
+    padding: 0.2rem;
+  }
+  .skills__card_inner_container {
+    justify-content: center;
+  }
+  .skills__circle_bottom {
+    display: none;
   }
 }

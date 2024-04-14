@@ -10,6 +10,7 @@ export const colors = {
   yellow: "#FFE86E",
   red: "#AF0C48",
   card: "#fff",
+  circleColor: "#d9d9d9",
 };
 
 const theme = {

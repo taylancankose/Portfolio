@@ -21,6 +21,12 @@ function Home() {
         backgroundColor: colors.gray90,
       }}
     >
+      <div
+        className="home__circle"
+        style={{
+          backgroundColor: colors.circleColor,
+        }}
+      />
       <Navbar />
       <div className="inner__container">
         <div className="text__container" id="text">
@@ -145,6 +151,12 @@ function Home() {
           />
         </div>
       </div>
+      <div
+        className="home__stick"
+        style={{
+          backgroundColor: colors.pink,
+        }}
+      />
     </div>
   );
 }

@@ -21,3 +21,10 @@
     padding: 2rem;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .projects__container {
+    padding: 2px;
+    padding-top: 20px;
+  }
+}
