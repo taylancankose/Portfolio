@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../../context/theme";
 import "./navbar.css";
 import Switch from "../Switch";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function Navbar() {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng, toggleLng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState, toggleLng } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
   return (
     <div
       className="navbar__container"

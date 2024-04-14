@@ -2,15 +2,13 @@ import React, { useContext } from "react";
 import "./skills.css";
 import { Skills as Data } from "./skills";
 import SkillCard from "../../components/SkillCard";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function Skills() {
   const { frontend, rest } = Data;
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
   return (
     <div
       style={{

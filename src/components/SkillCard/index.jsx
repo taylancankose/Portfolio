@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./card.css";
-import { ThemeContext } from "../../context/theme";
+import { AppContext } from "../../context";
 
 function SkillCard({ item }) {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
   return (
     <div key={item.id} className="skill_card__container">
       <img src={item.imgURL} height={120} width={120} className="card__img" />

@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import "./switch.css";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function Switch() {
-  const { toggleTheme, theme } = useContext(ThemeContext);
-  const { colors, key } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState, toggleTheme } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
+
   return (
     <div className="toggle-container">
       <input
@@ -23,7 +22,11 @@ function Switch() {
             color: colors.gray0,
           }}
         >
-          {translations[`theme-${key}`]}
+          {
+            translations[
+              `theme-${appState?.theme?.key === "dark" ? "light" : "dark"}`
+            ]
+          }
         </span>
       </label>
     </div>

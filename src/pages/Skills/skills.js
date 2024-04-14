@@ -94,7 +94,7 @@ Frontend Developer (React) (Hackerrank)
 React Native Using WebSockets: Live Stock Prices Mobile App (Udemy)
 ASO Course by MobileAction (Mobile Action Growth University)
 Mobile App User Acquisition Course by Tinuiti (Mobile Action Growth University)
-Startup Wise Guys x Growth Circuit Accelerator Program
+Startup Wise Guys  Growth Circuit Accelerator Program
 ING Inovation Center Accelerator Program
 Fundamentals of Entrepreneurship (Draper University, Silicon Valley)
 */

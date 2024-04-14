@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import "./projectcard.css";
 import Pill from "../Pill";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function ProjectCard({ project }) {
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { translations } = appState?.locale?.language;
   return (
     <div
       key={project.id}

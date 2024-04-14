@@ -5,10 +5,11 @@ import Image4 from "../../assets/projects/bmi.png";
 import Image5 from "../../assets/projects/color.png";
 import { LocaleContext } from "../../context/locale";
 import { useContext } from "react";
+import { AppContext } from "../../context";
 
 const DATA = () => {
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { translations } = appState?.locale?.language;
   return [
     {
       id: 1,

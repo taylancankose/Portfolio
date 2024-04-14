@@ -4,22 +4,19 @@ import Skills from "./pages/Skills";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
-import ThemeProvider from "./context/theme";
-import LocaleProvider from "./context/locale";
+import AppProvider from "./context";
 
 function App() {
   return (
-    <ThemeProvider>
-      <LocaleProvider>
-        <div>
-          <Home />
-          <Skills />
-          <Profile />
-          <Projects />
-        </div>
-        <Footer />
-      </LocaleProvider>
-    </ThemeProvider>
+    <AppProvider>
+      <div>
+        <Home />
+        <Skills />
+        <Profile />
+        <Projects />
+      </div>
+      <Footer />
+    </AppProvider>
   );
 }
 

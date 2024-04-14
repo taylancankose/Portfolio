@@ -2,20 +2,18 @@ import React, { useContext } from "react";
 import "./projects.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
 
 // Import Swiper styles
 import "swiper/css";
 import ProjectCard from "../../components/ProjectCard";
 import DATA from "./data";
+import { AppContext } from "../../context";
 
 function Projects() {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
   const projects = DATA();
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
   return (
     <div
       className="projects__container"

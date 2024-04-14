@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
 import "./footer.css";
 import Marker from "../Marker";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function Footer() {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
   return (
     <div
       className="footer__container"

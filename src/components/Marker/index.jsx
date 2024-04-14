@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import "./marker.css";
-import { ThemeContext } from "../../context/theme";
+import { AppContext } from "../../context";
 
 function Marker({ children, color, size }) {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
   return (
     <mark
       className="marker"

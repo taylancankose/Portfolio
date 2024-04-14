@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import Info from "../Info";
 import "./infocard.css";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function InfoCard() {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
+
   return (
     <div
       className="info_card_container"

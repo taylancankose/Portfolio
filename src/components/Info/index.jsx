@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./info.css";
-import { ThemeContext } from "../../context/theme";
+import { AppContext } from "../../context";
 
 function Info({ topic, detail }) {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
   return (
     <div
       className="info__container"

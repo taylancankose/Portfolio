@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import "./profile.css";
 import Marker from "../../components/Marker";
 import InfoCard from "../../components/InfoCard";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
+import { AppContext } from "../../context";
 
 function Profile() {
-  const { theme } = useContext(ThemeContext);
-  const { colors } = theme;
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
   return (
     <div
       className="profile__container"

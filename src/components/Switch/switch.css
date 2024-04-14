@@ -23,7 +23,7 @@
   height: 1.2em;
   width: 2.6em;
   border-radius: 1em;
-  background-color: #000;
+  background-color: #e92577;
   margin-right: 0.5em;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .toggle:checked + label::before {
-  background-color: #e92577;
+  background-color: #000;
 }
 
 .theme_span {

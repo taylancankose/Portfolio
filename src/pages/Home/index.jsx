@@ -6,15 +6,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import CV from "../../assets/CV.pdf";
 import Marker from "../../components/Marker";
-import { ThemeContext } from "../../context/theme";
-import { LocaleContext } from "../../context/locale";
 import Navbar from "../../components/Navbar";
+import { AppContext } from "../../context";
 
 function Home() {
-  const { theme } = useContext(ThemeContext);
-  const { lng } = useContext(LocaleContext);
-  const { translations } = lng.language;
-  const { colors } = theme;
+  const { appState } = useContext(AppContext);
+  const { colors } = appState.theme;
+  const { translations } = appState?.locale?.language;
 
   return (
     <div
