@@ -3,7 +3,6 @@ import Image2 from "../../assets/projects/feedback.png";
 import Image3 from "../../assets/projects/cocktail.png";
 import Image4 from "../../assets/projects/bmi.png";
 import Image5 from "../../assets/projects/color.png";
-import { LocaleContext } from "../../context/locale";
 import { useContext } from "react";
 import { AppContext } from "../../context";
 
@@ -40,16 +39,6 @@ const DATA = () => {
       githubLink: "https://github.com/taylancankose/cocktaildb",
       liveLink: "https://tecos-cocktail-lab.netlify.app/",
       technology: ["React", "REST API (Cocktails DB)"],
-    },
-    {
-      id: 4,
-      color: "#FFF3D9",
-      image: Image4,
-      title: "Chat App",
-      description: translations["project-chat"],
-      githubLink: "https://github.com/taylancankose/bmi",
-      liveLink: "https://bmi-teco.netlify.app/",
-      technology: ["React Native", "Socket.io"],
     },
     {
       id: 5,
