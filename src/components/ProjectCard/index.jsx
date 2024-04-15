@@ -39,7 +39,7 @@ function ProjectCard({ project }) {
         </a>
       </div>
       <div className="project__card__image_container">
-        <img src={project.image} width={400} />
+        <img src={project.image} height={300} />
       </div>
     </div>
   );

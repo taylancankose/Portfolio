@@ -1,8 +1,15 @@
 import Image1 from "../../assets/projects/pokedex.png";
 import Image2 from "../../assets/projects/feedback.png";
 import Image3 from "../../assets/projects/cocktail.png";
-import Image4 from "../../assets/projects/bmi.png";
 import Image5 from "../../assets/projects/color.png";
+import Image6 from "../../assets/projects/rhythm.png";
+import Image7 from "../../assets/projects/publyic.png";
+import Image8 from "../../assets/projects/otp.png";
+import Image9 from "../../assets/projects/whatsapp.png";
+import Image10 from "../../assets/projects/booking.png";
+import Image11 from "../../assets/projects/event.png";
+import Image12 from "../../assets/projects/mtm.png";
+
 import { useContext } from "react";
 import { AppContext } from "../../context";
 
@@ -53,7 +60,7 @@ const DATA = () => {
     {
       id: 6,
       color: "#FA9189",
-      image: Image3,
+      image: Image6,
       title: "Rhythm Radar",
       description: translations["project-rhythm"],
       githubLink: "https://github.com/taylancankose/rhythmradar",
@@ -68,7 +75,7 @@ const DATA = () => {
     {
       id: 7,
       color: "#D6F6FF",
-      image: Image3,
+      image: Image7,
       title: "Publyic",
       description: translations["project-publyic"],
       githubLink: "",
@@ -78,7 +85,7 @@ const DATA = () => {
     {
       id: 8,
       color: "#B3F5BC",
-      image: Image3,
+      image: Image12,
       title: "Meet The Music App & Dashboard",
       description: translations["project-mtm"],
       githubLink: "",
@@ -88,7 +95,7 @@ const DATA = () => {
     {
       id: 9,
       color: "#F9FFB5",
-      image: Image3,
+      image: Image8,
       title: "react native OTP project",
       description: translations["project-OTP"],
       githubLink: "",
@@ -104,7 +111,7 @@ const DATA = () => {
     {
       id: 10,
       color: "#FFE699",
-      image: Image3,
+      image: Image9,
       title: "whatsapp clone",
       description: translations["project-whatsapp"],
       githubLink: "",
@@ -114,7 +121,7 @@ const DATA = () => {
     {
       id: 11,
       color: "#FCAE7C",
-      image: Image3,
+      image: Image10,
       title: "Booking App",
       description: translations["project-booking"],
       githubLink: "",
@@ -131,7 +138,7 @@ const DATA = () => {
     {
       id: 12,
       color: "#E2CBF7",
-      image: Image3,
+      image: Image11,
       title: "Event App",
       description: translations["project-events"],
       githubLink: "",
