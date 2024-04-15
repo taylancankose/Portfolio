@@ -9,11 +9,15 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [appState, setAppState] = useState({
     locale: {
-      key: JSON.parse(localStorage.getItem("design-tokens")).locale || "tr",
+      key: JSON.parse(localStorage.getItem("design-tokens"))
+        ? JSON.parse(localStorage.getItem("design-tokens")).locale
+        : "tr",
       language: locale[0],
     },
     theme: {
-      key: JSON.parse(localStorage.getItem("design-tokens")).theme || "light",
+      key: JSON.parse(localStorage.getItem("design-tokens"))
+        ? JSON.parse(localStorage.getItem("design-tokens")).theme
+        : "light",
       colors: themes[0].colors,
     },
   });
@@ -50,8 +54,12 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const localTheme = JSON.parse(localStorage.getItem("design-tokens")).theme;
-    const localLng = JSON.parse(localStorage.getItem("design-tokens")).locale;
+    const localTheme = JSON.parse(localStorage.getItem("design-tokens"))
+      ? JSON.parse(localStorage.getItem("design-tokens")).theme
+      : "light";
+    const localLng = JSON.parse(localStorage.getItem("design-tokens"))
+      ? JSON.parse(localStorage.getItem("design-tokens")).locale
+      : "tr";
     setAppState({
       locale: {
         key: localLng === "tr" ? "tr" : "en",
@@ -72,9 +80,7 @@ const AppProvider = ({ children }) => {
         appState,
       }}
     >
-      <ThemeProvider>
-        <LocaleProvider>{children}</LocaleProvider>
-      </ThemeProvider>
+      {children}
     </AppContext.Provider>
   );
 };
